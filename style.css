@@ -104,3 +104,8 @@
     padding: 0;
 }
 
+.prodcuts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
