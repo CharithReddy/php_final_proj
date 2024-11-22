@@ -51,12 +51,20 @@
 
                 // Fetch the result
                 $result = $stmt->get_result();
-                if ($row = $result->fetch_assoc()) {
+                $row = $result->fetch_assoc();
+
+                if ($row) {
                     if ($row['password'] == $password) {
                         unset($_SESSION['errors']);
                         unset($_SESSION['form_data']);
                         $_SESSION['logged_inuser'] = $username;
-                        header('Location: admin_inventory.php');
+
+                        if ($username == "admin") {
+                            header('Location: admin_inventory.php');
+                        } else {
+                            header('Location: customer_home.php');
+                        }
+                        
                     } else {
                         $errors['login_error'] = "Incorrect password. Please try again.";
                     }
