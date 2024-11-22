@@ -13,13 +13,6 @@
     <title>Customer Home</title>
 </head>
 <body>
-    <div class="prodcuts-grid">
-        <?php
-            $sr_no = 0;
-            while($row = mysqli_fetch_array($results, MYSQLI_ASSOC)){
-                
-            }
-        ?>
-    </div>
+
 </body>
 </html>
